@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "Circe-Regular";
+  src: url(./assets/fonts/Circe-Regular.woff2) format("woff2");
+}
+
+body {
+  font-family: "Circe-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: rgba(0, 0, 0, 1);
+}
+
+main {
+  background-color: rgba(246, 247, 249, 1);
+  min-height: 100vh;
+}
+
+button {
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header.header {
+  width: 100%;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+header.header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-blue,
+.btn-red {
+  color: rgba(255, 255, 255, 1);
+}
+
+.add-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-red {
+  background-color: rgba(248, 17, 85, 1);
+  transition: all 300ms ease-out;
+}
+
+.btn-red:hover {
+  background-color: rgba(209, 0, 62, 1);
+}
+
+.btn-blue {
+  background-color: rgba(0, 91, 254, 1);
+  transition: all 300ms ease-out;
+}
+
+.btn-blue:hover {
+  background-color: rgba(0, 71, 198, 1);
+}
+
+.list-contacts-empty {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  opacity: 30%;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.mobile-button-container button {
+  width: 100%;
+}
+
+.dropdown {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 320px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 300ms ease-out;
+}
+
+.dropdown.active {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+  cursor: pointer;
+}
+
+h2.dropdown-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-title img {
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-title img:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-title-container {
+  padding: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-form,
+.group-form {
+  padding: 24px;
+  height: calc(100% - 70.59px);
+}
+
+.inputs-buttons--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.input {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.inputs-buttons--container button {
+  padding: 10px 19px;
+}
+
+.dropdown-group.input {
+  padding: 7px 7px 7px 12px;
+  cursor: pointer;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-group-dropdown-menu--container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-menu.group-list {
+  background-color: rgba(242, 242, 242, 1);
+  border-radius: 6px;
+  display: none;
+}
+
+.dropdown-menu.group-list.active {
+  display: block;
+}
+
+.dropdown-trigger img {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-trigger.active img {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu.group-list .group-item {
+  padding: 12px 11px;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+
+.dropdown-menu.group-list .group-item:hover {
+  background-color: rgba(228, 227, 227, 1);
+}
+
+.dropdown-menu.group-list .group-item:first-child:hover {
+  border-radius: 6px 6px 0 0;
+}
+.dropdown-menu.group-list .group-item:last-child:hover {
+  border-radius: 0 0 6px 6px;
+}
+
+.group-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-text-blue {
+  color: rgba(0, 91, 254, 1);
+}
+
+.btn-text-blue:hover {
+  background-color: rgba(0, 89, 254, 0.1);
+}
+
+.input-container {
+  display: flex;
+  gap: 12px;
+}
+
+button.trash,
+button.btn-edit {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 7px;
+  min-width: 38px;
+  height: 38px;
+  transition: all 300ms ease-out;
+}
+
+button.btn-edit:hover {
+  background-color: rgba(0, 91, 254, 1);
+}
+
+button.trash:hover {
+  background-color: red;
+  border-color: red;
+}
+
+button.trash:hover svg.svg-trash g path,
+button.btn-edit:hover svg.svg-edit g path {
+  fill: white;
+  opacity: 1;
+}
+
+.dropdown-group.input.main {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.dropdown-trigger.main.active {
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.group-list.contact.main {
+  background-color: white;
+}
+
+.dropdown-menu.group-list.contact.main .group-item.contant.main {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-menu.group-list.contact.main .group-item.contant.main:last-child {
+  padding: 24px 0 0 0;
+  border-bottom: none;
+}
+
+.dropdown-menu.group-list.contact.main .group-item.contant.main:hover {
+  background: none;
+}
+
+.phone-edit-delete--container {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.phone-edit-delete--container .phone {
+  font-size: 18px;
+}
+
+.edit-delete--block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 393px;
+  width: 90%;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.popup.active {
+  display: flex;
+}
+
+.popup.popup-delete-group h2 {
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.popup.popup-delete-group p {
+  margin-bottom: 24px;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.popup.popup-delete-group .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 24px;
+}
+
+.popup.popup-delete-group .close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
