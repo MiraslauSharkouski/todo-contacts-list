@@ -1,3 +1,5 @@
+import { StorageManager } from "../services/storage-manager";
+
 export class Validator {
   static isUniqueGroupName(name: string): boolean {
     const groups = StorageManager.getGroups();
