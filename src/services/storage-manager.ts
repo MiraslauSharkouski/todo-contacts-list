@@ -1,4 +1,3 @@
-// src/services/storage-manager.ts
 const CONTACTS_KEY = "contacts";
 const GROUPS_KEY = "groups";
 
