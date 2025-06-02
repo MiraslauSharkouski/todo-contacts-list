@@ -1,4 +1,3 @@
-// src/components/custom-dropdown.ts
 class CustomDropdown {
   private menu: HTMLElement;
   private trigger: HTMLElement;
