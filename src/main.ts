@@ -1,5 +1,5 @@
-// import "./style.css";
-// import "./reset.css";
+import "./style.css";
+import "./reset.css";
 
 import { moveAddContactButton } from "./utils/move-button";
 import { setupDropdowns } from "./components/dropdown/setup-dropdowns";
