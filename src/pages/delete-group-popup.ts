@@ -35,13 +35,13 @@ export function setupDeleteGroupPopup() {
   const cancelButton = popup.querySelector(".cancel-delete");
   const confirmButton = popup.querySelector(".confirm-delete");
 
-  // ❌ Отмена удаления
+  //  Отмена удаления
   cancelButton?.addEventListener("click", () => {
     overlay.classList.remove("active");
     popup.classList.remove("active");
   });
 
-  // ✅ Подтверждение удаления
+  //  Подтверждение удаления
   confirmButton?.addEventListener("click", () => {
     const groupId = (window as any).__DELETE_GROUP_ID__;
     if (!groupId) {

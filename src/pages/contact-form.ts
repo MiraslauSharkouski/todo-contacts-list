@@ -8,8 +8,6 @@ import { waitForElement } from "../utils/wait-for-element";
 import { ensureDropdownExists } from "../utils/ensure-dropdown-exists";
 import { updateContactList } from "../utils/update-contact-list";
 import { createGroupContainerIfHasContacts } from "../utils/create-group-container";
-// import { renderGroupItem } from "../pages/group-form";
-// import { updateContactGroupDropdown } from "../utils/update-contact-group-dropdown";
 
 function isFormValid(
   nameInput: HTMLInputElement | null,
@@ -104,8 +102,6 @@ export function setupContactForm() {
     contacts.push(contact);
     StorageManager.saveContacts(contacts);
 
-    // const groups = StorageManager.getGroups();
-    // const group = groups.find((g) => g.id === groupId);
     const group = StorageManager.getGroups().find((g) => g.id === groupId);
 
     if (group) {

@@ -1,7 +1,5 @@
 // src/utils/ensure-dropdown-exists.ts
 
-// import { StorageManager } from "../services/storage-manager";
-
 export function ensureDropdownExists() {
   const existing = document.querySelector(
     ".dropdown-group-dropdown-menu--container"
