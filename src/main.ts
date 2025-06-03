@@ -7,8 +7,6 @@ import { setupAllGroupDropdowns } from "./utils/setup-all-group-dropdowns";
 import { updateContactGroupDropdown } from "./utils/update-contact-group-dropdown";
 import { initializeContactList } from "./utils/initialize-contact-list";
 import { setupContactGroupDropdowns } from "./utils/setup-contact-group-dropdown";
-// import { updateContactList } from "./utils/update-contact-list";
-// import { updateDropdowns } from "./utils/update-dropdowns";
 
 window.addEventListener("DOMContentLoaded", () => {
   moveAddContactButton();
