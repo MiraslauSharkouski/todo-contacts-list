@@ -5,21 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Список контактов</title>
-  <script type="module" crossorigin src="/assets/index-BxUCAf5U.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-on4kMAcv.css">
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  <script type="module" crossorigin src="/todo-contacts-list/assets/index-CMc_uoYj.js"></script>
 </head>
 
 <body class="body">
   <template id="add-contact-button-template">
     <button class="add-contact btn-red">
-      Добавить контакт <img
-        src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_11141_16)'%3e%3cpath%20d='M14.25%209.75H9.75V14.25H8.25V9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_11141_16'%3e%3crect%20width='18'%20height='18'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-        alt="Добавить контакт">
+      Добавить контакт <img src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_11141_16)'%3e%3cpath%20d='M14.25%209.75H9.75V14.25H8.25V9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_11141_16'%3e%3crect%20width='18'%20height='18'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Добавить контакт">
     </button>
   </template>
   <header class="header">
     <div class="header-content container">
-      <div class="logo"><a href="/"><img src="/assets/logo-BxmYB9YV.svg" alt="logo"></a></div>
+      <div class="logo"><a href="/"><img src="/todo-contacts-list/assets/logo-BxmYB9YV.svg" alt="logo"></a></div>
       <div class="buttons">
         <div class="desktop-button-container"></div>
         <button class="groups btn-blue">Группы</button>
@@ -31,9 +30,7 @@
       <div class="mobile-button-container"></div>
       <div class="dropdown-group-dropdown-menu--container-main">
         <div class="dropdown-group input-main">
-          <div class="dropdown-trigger-main">название группы <img
-              src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.5'%20clip-path='url(%23clip0_8779_2264)'%3e%3cpath%20d='M16.885%208.29498L12.295%2012.875L7.70497%208.29498L6.29497%209.70498L12.295%2015.705L18.295%209.70498L16.885%208.29498Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8779_2264'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-              alt="arrow"></div>
+          <div class="dropdown-trigger-main">название группы <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.5'%20clip-path='url(%23clip0_8779_2264)'%3e%3cpath%20d='M16.885%208.29498L12.295%2012.875L7.70497%208.29498L6.29497%209.70498L12.295%2015.705L18.295%209.70498L16.885%208.29498Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8779_2264'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="arrow"></div>
           <ul class="dropdown-menu group-list contact-main">
             <li class="group-item contant-main">
               <div class="name-container">Введите ФИО</div>
@@ -89,9 +86,7 @@
   <!-- Выпадающее меню "Добавить контакт" -->
   <div class="dropdown add-contact-dropdown">
     <div class="dropdown-title-container">
-      <h2 class="dropdown-title">Добавить контакт <img
-          src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e"
-          alt="close"></h2>
+      <h2 class="dropdown-title">Добавить контакт <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e" alt="close"></h2>
     </div>
     <form class="contact-form">
       <div class="inputs-buttons--container">
@@ -102,9 +97,7 @@
             required>
           <div class="dropdown-group-dropdown-menu--container">
             <div class="dropdown-group input">
-              <div class="dropdown-trigger">Выберите группу <img
-                  src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.5'%20clip-path='url(%23clip0_8779_2264)'%3e%3cpath%20d='M16.885%208.29498L12.295%2012.875L7.70497%208.29498L6.29497%209.70498L12.295%2015.705L18.295%209.70498L16.885%208.29498Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8779_2264'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-                  alt="arrow"></div>
+              <div class="dropdown-trigger">Выберите группу <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.5'%20clip-path='url(%23clip0_8779_2264)'%3e%3cpath%20d='M16.885%208.29498L12.295%2012.875L7.70497%208.29498L6.29497%209.70498L12.295%2015.705L18.295%209.70498L16.885%208.29498Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8779_2264'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="arrow"></div>
             </div>
             <ul class="dropdown-menu group-list">
               <li class="group-item"></li>
@@ -120,9 +113,7 @@
   <!-- Выпадающее меню "Группы" -->
   <div class="dropdown groups-dropdown">
     <div class="dropdown-title-container">
-      <h2 class="dropdown-title">Группы контактов <img
-          src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e"
-          alt="close"></h2>
+      <h2 class="dropdown-title">Группы контактов <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e" alt="close"></h2>
     </div>
     <form class="group-form">
       <div class="groups-list"></div>
@@ -142,9 +133,7 @@
 
   <!-- Попап при удалении группы -->
   <div class="popup popup-delete-group">
-    <img class="close"
-      src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e"
-      alt="close">
+    <img class="close" src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.3'%20d='M14%201.41L12.59%200L7%205.59L1.41%200L0%201.41L5.59%207L0%2012.59L1.41%2014L7%208.41L12.59%2014L14%2012.59L8.41%207L14%201.41Z'%20fill='black'/%3e%3c/svg%3e" alt="close">
     <div class="popup-content">
       <h2>Удалить группу?</h2>
       <p>Удаление группы повлечет за собой удаление контактов, связанных с этой группой.</p>
