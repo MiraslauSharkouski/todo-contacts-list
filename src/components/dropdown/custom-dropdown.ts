@@ -326,7 +326,11 @@ export class CustomDropdown {
         }
       });
 
-      this.itemsContainer.appendChild(li);
+      if (this.itemsContainer) {
+        this.itemsContainer.appendChild(li);
+      } else {
+        console.error("itemsContainer не найден");
+      }
     });
   }
 

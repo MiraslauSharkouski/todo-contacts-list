@@ -50,7 +50,11 @@ export function setupAllGroupDropdowns() {
       if (trigger && selectedName) {
         trigger.textContent = selectedName + " ";
         if (arrow) trigger.appendChild(arrow); // восстанавливаем стрелку
-        arrow.style.transform = "rotate(0)";
+        if (arrow) {
+          arrow.style.transform = "rotate(0)";
+        } else {
+          console.warn("Стрелка не найдена");
+        }
       }
 
       // Закрываем меню после выбора
