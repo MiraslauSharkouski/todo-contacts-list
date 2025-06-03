@@ -11,6 +11,29 @@ import { createGroupContainerIfHasContacts } from "../utils/create-group-contain
 // import { renderGroupItem } from "../pages/group-form";
 // import { updateContactGroupDropdown } from "../utils/update-contact-group-dropdown";
 
+function isFormValid(
+  nameInput: HTMLInputElement | null,
+  phoneInput: HTMLInputElement | null,
+  groupId: string | null
+): boolean {
+  if (!nameInput || !phoneInput || !groupId) {
+    Toast.show("Выберите группу и заполните все поля", "error");
+    return false;
+  }
+
+  if (!nameInput.value.trim()) {
+    Toast.show("Имя не может быть пустым", "error");
+    return false;
+  }
+
+  if (!phoneInput.value.trim()) {
+    Toast.show("Номер телефона не может быть пустым", "error");
+    return false;
+  }
+
+  return true;
+}
+
 export function setupContactForm() {
   const form = document.querySelector(".contact-form") as HTMLFormElement;
   if (!form) return;
@@ -32,7 +55,7 @@ export function setupContactForm() {
   });
 
   // --- Подписываемся на событие выбора ---
-  groupDropdown.bind("click", (selected) => {
+  groupDropdown.bind("change", (selected) => {
     console.log("Выбрана группа:", selected);
   });
 
@@ -49,6 +72,8 @@ export function setupContactForm() {
     const nameInput = form.querySelector<HTMLInputElement>("[name='name']");
     const phoneInput = form.querySelector<HTMLInputElement>("[name='phone']");
     const groupId = groupDropdown.getSelectedValue();
+
+    if (!isFormValid(nameInput, phoneInput, groupId)) return;
 
     if (!nameInput || !phoneInput || !groupId) {
       Toast.show("Не все поля формы найдены", "error");
@@ -79,8 +104,9 @@ export function setupContactForm() {
     contacts.push(contact);
     StorageManager.saveContacts(contacts);
 
-    const groups = StorageManager.getGroups();
-    const group = groups.find((g) => g.id === groupId);
+    // const groups = StorageManager.getGroups();
+    // const group = groups.find((g) => g.id === groupId);
+    const group = StorageManager.getGroups().find((g) => g.id === groupId);
 
     if (group) {
       createGroupContainerIfHasContacts(group); // ← Создаётся только при наличии контактов
@@ -89,6 +115,6 @@ export function setupContactForm() {
 
     Toast.show("Контакт успешно добавлен", "success");
     form.reset();
-    // updateContactList(groupId);
+    updateContactList(groupId);
   });
 }

@@ -66,12 +66,14 @@ export function updateContactGroupDropdown() {
   const dropdownContainer = document.querySelector<HTMLElement>(
     ".dropdown-group-dropdown-menu--container"
   );
+
   if (!dropdownContainer) return;
 
   const ul = dropdownContainer.querySelector("ul.dropdown-menu.group-list");
+
   if (!ul) return;
 
-  ul.innerHTML = ""; // Очистка
+  ul.innerHTML = "";
 
   const groups = StorageManager.getGroups();
 

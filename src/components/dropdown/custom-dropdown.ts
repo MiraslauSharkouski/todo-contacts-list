@@ -35,16 +35,16 @@
 //     const item = this.itemsContainer.querySelector(".selected");
 //     if (!item) return null;
 
-//     // const elementItem = item as HTMLElement;
-//     // return {
-//     //   id: elementItem.dataset.id!,
-//     //   name: elementItem.textContent || "",
-//     // };
-
+//     const elementItem = item as HTMLElement;
 //     return {
-//       id: item.getAttribute("data-id")!,
-//       name: item.textContent || "",
+//       id: elementItem.dataset.id!,
+//       name: elementItem.textContent || "",
 //     };
+
+//     // return {
+//     //   id: item.getAttribute("data-id")!,
+//     //   name: item.textContent || "",
+//     // };
 //   }
 
 //   public getSelectedValue(): string | null {
@@ -251,21 +251,38 @@ export class CustomDropdown {
     }
   }
 
+  // public getSelectedItem(): { id: string; name: string } | null {
+  //   if (!this.itemsContainer) return null;
+
+  //   const item = this.itemsContainer.querySelector<HTMLElement>(".selected");
+  //   if (!item) return null;
+
+  //   return {
+  //     id: item.dataset.id!,
+  //     name: item.textContent || "",
+  //   };
+  // }
+
   public getSelectedItem(): { id: string; name: string } | null {
     if (!this.itemsContainer) return null;
 
-    const item = this.itemsContainer.querySelector<HTMLElement>(".selected");
-    if (!item) return null;
+    const selectedItem = this.itemsContainer.querySelector(".selected");
+    if (!selectedItem) return null;
 
     return {
-      id: item.dataset.id!,
-      name: item.textContent || "",
+      id: selectedItem.getAttribute("data-id")!,
+      name: selectedItem.textContent!,
     };
   }
 
+  // public getSelectedValue(): string | null {
+  //   const item = this.itemsContainer?.querySelector(".selected");
+  //   return item?.getAttribute("data-id") ?? null;
+  // }
+
   public getSelectedValue(): string | null {
-    const item = this.itemsContainer?.querySelector(".selected");
-    return item?.getAttribute("data-id") ?? null;
+    const item = this.getSelectedItem();
+    return item?.id ?? null;
   }
 
   public set dataItems(items: Array<{ id: string; name: string }>) {

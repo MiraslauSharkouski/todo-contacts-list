@@ -1,18 +1,12 @@
 // src/utils/ensure-dropdown-exists.ts
-// import type { Group } from "../types/group";
+
+// import { StorageManager } from "../services/storage-manager";
 
 export function ensureDropdownExists() {
   const existing = document.querySelector(
     ".dropdown-group-dropdown-menu--container"
   );
   if (existing) return;
-
-  //   const div = document.createElement("div");
-  //     div.className = "group-item";
-  //     div.dataset.id = group.id;
-  //     div.innerHTML = `
-  //       <div class="edit-group">${group.name}</div>
-  //     `;
 
   const dropdownContainer = document.createElement("div");
   dropdownContainer.className = "dropdown-group-dropdown-menu--container";
@@ -24,12 +18,8 @@ export function ensureDropdownExists() {
     <ul class="dropdown-menu group-list"></ul>
   `;
 
-  const inputsContainer = document.querySelector(
-    ".contact-form .inputs-container"
-  );
+  const inputsContainer = document.querySelector(".inputs-container");
   if (inputsContainer) {
     inputsContainer.appendChild(dropdownContainer);
-  } else {
-    console.warn("Не найден .inputs-container для дропдауна");
   }
 }

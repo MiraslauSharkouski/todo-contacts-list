@@ -444,3 +444,7 @@ button.btn-edit:hover svg.svg-edit g path {
   align-items: center;
   justify-content: space-between;
 }
+
+.mobile-button-container {
+  margin-bottom: 16px;
+}

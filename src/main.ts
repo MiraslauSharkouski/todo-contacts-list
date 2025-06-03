@@ -9,12 +9,13 @@ import { setupGroupForm } from "./pages/group-form";
 import { setupAllGroupDropdowns } from "./utils/setup-all-group-dropdowns";
 import { updateContactGroupDropdown } from "./utils/update-contact-group-dropdown";
 import { initializeContactList } from "./utils/initialize-contact-list";
+import { setupContactGroupDropdowns } from "./utils/setup-contact-group-dropdown";
 // import { updateContactList } from "./utils/update-contact-list";
 // import { updateDropdowns } from "./utils/update-dropdowns";
 
 window.addEventListener("DOMContentLoaded", () => {
   moveAddContactButton(); // Перемещаем кнопку
-  setupAllGroupDropdowns();
+
   setupDropdowns(); // Инициализируем дропдауны
   setupDeleteGroupPopup(); // Попап удаления группы
   setupGroupForm(); // Форма создания группы
@@ -22,8 +23,10 @@ window.addEventListener("DOMContentLoaded", () => {
   // --- Ждём появления контейнера ---
   waitForElement(".dropdown-group-dropdown-menu--container", () => {
     updateContactGroupDropdown(); // ← Теперь будет работать
+    setupAllGroupDropdowns(); // ← Теперь будет работать
   });
   initializeContactList();
+  setupContactGroupDropdowns();
 });
 
 // Адаптация под ресайз
